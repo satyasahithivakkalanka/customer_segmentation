@@ -2,44 +2,44 @@
 
 ## Overview
 
-This project performs customer segmentation based on *annual income*
-and *spending score* using the K-Means clustering algorithm. The goal
+This project performs customer segmentation based on **annual income**
+and **spending score** using the K-Means clustering algorithm. The goal
 is to identify distinct customer groups that can help a business tailor
 marketing strategies and improve decision-making.
 
 ## Steps in the Project
 
-1.  *Data Import and Cleaning* The dataset ⁠ Mall_Customers.csv ⁠ is
+1.  **Data Import and Cleaning** The dataset `Mall_Customers.csv` is
     loaded and cleaned. Only two key variables are used for clustering:
 
     -   Annual Income (k\$)
     -   Spending Score (1-100) There are no missing values in these
         columns.
 
-2.  *Exploratory Data Analysis* Two histograms show the feature
+2.  **Exploratory Data Analysis** Two histograms show the feature
     distributions:
 
-    -   *Annual Income Distribution:* Most customers earn between 40k
+    -   **Annual Income Distribution:** Most customers earn between 40k
         and 80k, with a smaller group earning above 100k.
-    -   *Spending Score Distribution:* The scores are spread across
+    -   **Spending Score Distribution:** The scores are spread across
         the range, with visible clusters of high and low spenders.
 
-3.  *Feature Scaling* Since income and spending score are measured on
+3.  **Feature Scaling** Since income and spending score are measured on
     different scales, both features are standardized before clustering.
 
-4.  *Choosing the Optimal Number of Clusters*
+4.  **Choosing the Optimal Number of Clusters**
 
-    -   *Elbow Method:* The curve starts to flatten around **k = 5 or
+    -   **Elbow Method:** The curve starts to flatten around **k = 5 or
         6**, suggesting that this range captures most of the structure
         in the data.
-    -   *Silhouette Score:* The highest score appears at *k = 5*,
-        and scores remain strong up to *k = 6*, confirming a similar
+    -   **Silhouette Score:** The highest score appears at **k = 5**,
+        and scores remain strong up to **k = 6**, confirming a similar
         choice.
 
-5.  *Model Training* The final K-Means model is trained with **6
+5.  **Model Training** The final K-Means model is trained with **6
     clusters** to balance accuracy and interpretability.
 
-6.  *Cluster Centers* The cluster centers in original units are:
+6.  **Cluster Centers** The cluster centers in original units are:
 
       Cluster     Annual Income (k\$)   Spending Score (1-100)
       --------- --------------------- ------------------------
@@ -53,7 +53,7 @@ marketing strategies and improve decision-making.
     These centers represent the typical income and spending score for
     each segment.
 
-7.  *Cluster Visualization* A scatter plot of **Annual Income vs
+7.  **Cluster Visualization** A scatter plot of **Annual Income vs
     Spending Score** clearly shows six groups of customers.
 
     -   One group has low income and low spending (Cluster 3).
@@ -63,10 +63,10 @@ marketing strategies and improve decision-making.
     -   The mid-income, average spenders form a stable cluster (Cluster
         0).
 
-8.  *Insights*
+8.  **Insights**
 
-    -   The model identifies both *value shoppers* (low spenders at
-        all income levels) and *premium customers* (high spenders with
+    -   The model identifies both **value shoppers** (low spenders at
+        all income levels) and **premium customers** (high spenders with
         high income).
     -   Businesses can target Cluster 4 and Cluster 5 for loyalty
         programs or premium product offerings.
@@ -74,19 +74,19 @@ marketing strategies and improve decision-making.
         indicate potential for marketing campaigns or personalized
         recommendations.
 
-9.  *Output* The final dataset is saved as
-    ⁠ mall_customers_with_clusters.csv ⁠, which includes each customer's
+9.  **Output** The final dataset is saved as
+    `mall_customers_with_clusters.csv`, which includes each customer's
     assigned cluster for further analysis or dashboard visualization.
 
 ## How to Run the Project
 
-1.  Place ⁠ Mall_Customers.csv ⁠ in the same folder as
-    ⁠ customer_segmentation.py ⁠.
+1.  Place `Mall_Customers.csv` in the same folder as
+    `customer_segmentation.py`.
 
 2.  Run the script:
 
-    ⁠  bash
+    ``` bash
     python customer_segmentation.py
-     ⁠
+    ```
 
 3.  The program will generate graphs and export the final CSV file.
